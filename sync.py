@@ -92,6 +92,5 @@ for login in users.keys():
 
 if mode == 'update':
     cnx.commit()
-
-cursor.close()
-cnx.close()
+else:
+    sys.exit(result)
