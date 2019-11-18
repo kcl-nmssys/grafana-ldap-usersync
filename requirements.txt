@@ -1,0 +1,3 @@
+python-ldap
+mysql-connector-python
+pyyaml

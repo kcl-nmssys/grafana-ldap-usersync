@@ -1,11 +1,17 @@
-ldap_users_group: CN=grafana-users,OU=groups,DC=example,DC=com
-ldap_admins_group: CN=grafana-admins,OU=groups,DC=example,DC=com
-ldap_hostname: ad.example.com
-ldap_username: username
-ldap_password: password
-ldap_userbase: OU=users,DC=example,DC=com
-ldap_username_attrib: sAMAccountName
-ldap_email_attrib: mail
-ldap_name_attrib: displayname
+ldap:
+  users_group: CN=grafana-users,OU=groups,DC=example,DC=com
+  admins_group: CN=grafana-admins,OU=groups,DC=example,DC=com
+  hostname: ad.example.com
+  username: username
+  password: secret
+  userbase: OU=users,DC=example,DC=com
+  username_attrib: sAMAccountName
+  email_attrib: mail
+  name_attrib: displayName
+  memberof_attrib: 'memberOf:1.2.840.113556.1.4.1941:'
 
-grafana_config: /etc/grafana/grafana.ini
+grafana_db:
+  hostname: localhost
+  database: grafana
+  username: grafana
+  password: secret
